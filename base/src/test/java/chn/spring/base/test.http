@@ -1,0 +1,29 @@
+# curl localhost:8080/api
+GET localhost:8080/api
+
+###
+
+GET localhost:8080/api/items
+
+###
+GET localhost:8080/api/item/1
+
+###
+PUT localhost:8080/api/item/1 name='item11' inventory=30
+
+###
+POST localhost:8080/api/item name='item3' inventory=33
+
+###
+
+# curl -X PUT localhost:8080/api/item/1 -d "{\"name\": \"item1\", \"inventory\": \"30\"}" -H "Content-Type:application/json"
+PUT localhost:8080/api/item/1
+Content-Type: application/json
+
+{
+  "name": "item1",
+  "inventory": "30"
+}
+
+###
+GET localhost:8080/api/item/6
